@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './app.css';
+import Header from './header';
 
 class App extends Component {
   constructor(props) {
@@ -18,11 +19,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="products">
-        <button onClick={() => this.addNewItem()}>Add item</button>
-        {this.state.items.map(item => (
-          <input placeholder="Enter item"></input>
-        ))}
+      <div>
+        <Header />
+        <div className="products">
+          <button onClick={() => this.addNewItem()}>Add item</button>
+          {this.state.items.map(item => (
+            <input placeholder="Enter item"></input>
+          ))}
+        </div>
       </div>
     );
   }
