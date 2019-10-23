@@ -21,6 +21,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <input className="search" placeholder="Search"></input>
         <div className="products">
           <button onClick={() => this.addNewItem()}>Add item</button>
           {this.state.items.map(item => (
