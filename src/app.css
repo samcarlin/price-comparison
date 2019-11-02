@@ -2,10 +2,17 @@
   box-sizing: border-box;
   margin: 0;
 }
-
+.product-container {
+  margin-left: 200px;
+}
 .products {
-  background: red;
+  
   display: flex;
   flex-direction: column;
   max-width: 300px;
+}
+
+.item {
+  margin: 20px;
+  padding: 10px;
 }

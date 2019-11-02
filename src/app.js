@@ -7,7 +7,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      items: [],
+      items: [
+      ],
     };
   }
 
@@ -22,11 +23,14 @@ class App extends Component {
       <div>
         <Header />
         <input className="search" placeholder="Search"></input>
-        <div className="products">
-          <button onClick={() => this.addNewItem()}>Add item</button>
-          {this.state.items.map(item => (
-            <input placeholder="Enter item"></input>
-          ))}
+        <div className="product-container">
+
+          <div className="products">
+            <button onClick={() => this.addNewItem()}>Add item</button>
+            {this.state.items.map(item => (
+              <input placeholder="Enter item" className="item"></input>
+            ))}
+          </div>
         </div>
       </div>
     );
